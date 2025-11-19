@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/* Section Base */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px; /* Space for fixed nav */
+}
+
+/* Logout Button */
+.btn-logout {
+    font-size: 20px;
+    color: #74C0FC;
+    text-decoration: none;
+    padding: 9px 10px;
+    border-radius: 5px;
+    background-color: black;
+    border: 1px solid #74C0FC;
+    transition: 0.4s ease;
+}
+.btn-logout:hover {
+    background: #74C0FC;
+    color: black;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: black;
+    box-shadow: inset 0 0 0 1px #74C0FC,
+                0 0 10px #eeeeee,
+                0 0 20px #74C0FC,
+                0 0 30px #74C0FC,
+                0 0 40px #74C0FC,
+                0 0 50px #74C0FC,
+                0 0 60px #74C0FC;
+}
+
+nav .logo {
+    font-size: 22px;
+    color: #74C0FC;
+    cursor: pointer;
+}
+
+nav .logo span {
+    color: white;
+    text-decoration: underline;
+}
+
+nav .logo a
+{
+    text-decoration: none;
+    color: #74C0FC;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #74C0FC;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+nav ul li a.active {
+    color: white;
+    text-decoration: underline;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socials a {
+    font-size: 22px;
+    color: #74C0FC;
+    transition: 0.3s ease;
+    text-decoration: none;
+    text-shadow: 0 0 10px #74C0FC;
+}
+
+.socials a:hover {
+    color: white;
+    text-shadow: 0 0 15px;
+    transform: scale(1.2);
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    margin-top: 120px; /* Space below nav */
+    max-width: 900px;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 50px;
+    color: #74C0FC;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #74C0FC;
+}
+
+.content p {
+    font-size: 20px;
+    color: #74C0FC;
+    margin-bottom: 20px;
+}
+
+.content a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #74C0FC;
+    transition: 0.3s ease;
+}
+
+.content a:hover {
+    background: white;
+    color: #74C0FC;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.about .pic {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 4px solid #74C0FC;
+    object-fit: cover;
+    box-shadow: 0px 0px 30px rgba(116, 192, 252, 0.7);
+    transition: transform 0.3s ease;
+}
+.about .pic:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #74C0FC;
+    margin-bottom: 10px;
+}
+
+.about-text h5 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about-text h5 span {
+    color: white;
+    text-decoration: underline;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #74C0FC;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #74C0FC;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.about-text .btn:hover {
+    background: white;
+    color: #74C0FC;
+}
+
+
+.background
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.background h2
+{
+    font-size: 36px;
+    color: #74C0FC;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #74C0FC;
+}
+
+.background p
+{
+    font-size: 18px;
+    color: #74C0FC;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+*/
+
+/* Certificate Section */
+.certificate {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.certificate h2 {
+    font-size: 36px;
+    color: #74C0FC;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #74C0FC;
+}
+
+.certificate p {
+    font-size: 18px;
+    color: #74C0FC;
+    margin-bottom: 40px;
+}
+
+/* Certificate Card */
+.cert-container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cert-card 
+{
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(116, 192, 252, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.cert-card img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #74C0FC;
+}
+
+/* Overlay text */
+.cert-overlay 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    color: #74C0FC;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.cert-card:hover .cert-overlay 
+{
+    opacity: 1;
+}
+
+.cert-overlay h3 {
+    font-size: 22px;
+    color: #74C0FC;
+    margin-bottom: 5px;
+}
+
+.cert-overlay p {
+    font-size: 16px;
+    color: #74C0FC;
+}
+
+/* Work Section */
+.works 
+{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.works .work-text 
+{
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.works h2 
+{
+    font-size: 36px;
+    text-align: center;
+    color: #74C0FC;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #74C0FC;
+}
+
+.works p 
+{
+    font-size: 20px;
+    color: #74C0FC;
+    margin-bottom: 20px;
+}
+
+/* Grid Wrapper */
+.works-grid 
+{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Each work item */
+.work-container {
+    margin-bottom: 40px;
+}
+
+.work-box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(116, 192, 252, 0.7);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.work-box:hover {
+    transform: scale(1.05);
+}
+
+.work-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover overlay */
+.work-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.work-box:hover .work-layer {
+    opacity: 1;
+}
+
+/* Work text styles */
+.work-layer h4 {
+    font-size: 24px;
+    margin-bottom: 15px; /* <-- adds space so you can SEE h4 clearly */
+    color: #74C0FC;
+    text-shadow: 0 0 10px #74C0FC;
+}
+
+.work-layer p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.work-layer a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #74C0FC;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.work-layer a:hover {
+    background: white;
+    color: #74C0FC;
+}
+
+
+.background-container
+{
+    margin-bottom: 40px;
+}
+
+.background-container .work-box
+{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(116, 192, 252, 0.7);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.contact
+{
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact h2
+{
+    font-size: 36px;
+    color: #74C0FC;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #74C0FC;
+}
+
+.contact p
+{
+    font-size: 20px;
+    color: #74C0FC;
+    margin-bottom: 10px;
+}
+
+footer
+{
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: #74C0FC;
+    border-top: 1px solid #74C0FC;
+    margin-top: 40px;
+}

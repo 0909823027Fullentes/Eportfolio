@@ -1,0 +1,529 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+
+}
+
+section
+{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0,0, 0,  .5), rgba(0, 0, 0, .5)), url(pic/istockphoto-1411057168-170667a.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+section nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    background: maroon;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+section nav .logo
+{
+    font-size: 35px;
+    color: black;
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
+    left: -4%;
+}
+
+section nav .logo span
+{
+    color: black;
+    text-decoration: underline;
+}
+
+section nav p
+{
+    font-size: 17px;
+    position: relative;
+    top: 8px;
+    left: -4%;
+}
+
+
+section nav p a
+{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section nav p a:hover
+{
+    color: silver;
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+section nav ul
+{
+    list-style: none;
+}
+
+section nav ul li
+{
+    display: inline-block;
+    margin: 5px 25px;
+}
+
+section nav ul li a
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease;
+}
+
+section nav ul li a:hover
+{
+    color: silver;
+}
+
+section nav .icons a 
+{
+    color: black;
+    text-decoration: none;
+    margin: 0 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+
+
+section nav .icons a .fa-solid .fa-circle-user
+{
+    margin: 0 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+section nav .icons a .fa-solid .fa-circle-user:hover
+{
+    color: silver;
+}
+
+section .main .main_content
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+section .main .main_content .main_text h1
+{
+    font-size: 40px;
+    line-height: 30px;
+    font-family: sans-serif;
+    background: linear-gradient(to right, maroon, white );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 45px;
+    left: 5%;
+}
+
+section .main .main_content .main_text h1 span
+{
+    font-size: 45px;
+    background: linear-gradient(to right, white, maroon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section .main .main_content .main_text p
+{
+    color: white;
+    width: 600px;
+    text-align: justify;
+    line-height: 21px;
+    position: relative;
+    top: 85px;
+    left: 5%;
+}
+
+section .main .main_content .main_image img
+{
+    width: 650px;
+    position: relative;
+    left: 20px;
+    top: 75px;
+}
+
+section .main .social-icon
+{
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(-50%,-50%);
+    font-size: 19px;
+}
+
+section .main .social-icon i
+{
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section .main .social-icon i:hover
+{
+    color: white;
+}
+
+section .main .button
+{
+    position: absolute;
+    left: 6%;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: maroon
+}
+
+section .main .button a
+{
+    color: white;
+    text-decoration: none;
+}
+
+section .main .button i
+{
+    color: white;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+section .main .button:hover i
+{
+    transform: translateX(6px);
+}
+
+/* --Products--*/
+
+.products
+{
+    font-weight: 100%;
+    height: 14vh;
+    padding: 25px 0;
+}
+
+.games h1
+{
+    margin: 35px 0;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, white, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.games .box
+{
+    width: 90;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+}
+
+.games .box .card
+{
+    width: 290px;
+    height: 440px;
+    box-shadow: 0 0 8px maroon;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: silver;
+}
+
+.games .box .card .small_card
+{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    margin: 10px 0;
+    transform: translateX(-20px);
+    transition: 0.3s;
+}
+
+.games .box .card:hover .small_card
+{
+    transform: translateX(2px);
+    cursor: pointer;
+}
+
+.games .box .card .image
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.games .box .card .image img
+{
+    width: 150px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.games .box .card:hover .image img
+{
+    transform: scale(1.1);
+}
+
+.games .box .card .small_card i
+{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 2px 0;
+    line-height: 40px;
+    border: 2px solid maroon;
+    transition: 0.2s;
+}
+
+.games .box .card .small_card i:hover
+{
+    color: maroon;
+}
+
+.games .box .card .product_text
+{
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+
+.games .box .card .product_text p
+{
+    color: black;
+    line-height: 15px;
+    margin: 8px 0;
+}
+
+.games .box .card .product_text h3
+{
+    margin: 9px 0;
+}
+
+.games .box .card .product_text .product_star
+{
+    color: maroon;
+    margin-bottom: 19px;
+    cursor: pointer;
+}
+
+.games .box .card .product_text .btn
+{
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(to right, maroon, black);
+    color: white;
+
+}
+
+/*about*/
+
+.About
+{
+    width: 100%;
+    height: 100vh;
+    padding: 35px 0;
+}
+
+.About h1
+{
+    font-size: 55px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(14, 13, 13);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.About h1 span
+{
+    background: linear-gradient(to right, maroon, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 15px;
+}
+
+.About .about_main
+{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.About .about_main .about_image
+{
+    display: flex;
+    margin-top: 50px;
+}
+
+.About .about_main .about_image .about_small_image
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+}
+
+.About .about_main .about_image .about_small_image img
+{
+    height: 90px;
+    margin: 5px 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, maroon, black);
+    display: block;
+    border-radius: 5;
+    padding: 5px 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.About .about_main .about_image .about_small_image img:hover
+{
+    opacity: 1;
+}
+
+.About .about_main .image_container
+{
+    padding: 10px;
+    display: flex;
+}
+
+.About .about_main .image_container img
+{
+    border: 3px solid maroon;
+    border-radius: 30px;
+    text-align: justify;
+    padding: 20px 20px;
+    border: 2px solid maroon;
+    border-radius: 20px;
+    box-shadow: 0 0 8px maroon;
+}
+
+
+.About .about_main .about_text p
+{
+    background: linear-gradient(to left, maroon, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 20px;
+    width: 400px;
+    text-align: justify;
+    padding: 25px 30px;
+    border: 2px solid maroon;
+    border-radius: 20px;
+    box-shadow: 0 0 8px maroon;
+}
+.About .about_btn
+{
+    color: black;
+    background: none;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px 20px;
+    border: 2px solid maroon;
+    text-decoration: none;
+    box-shadow: 0 0 8px maroon;
+    transition: 0.5s;
+}
+
+.About .about_btn:hover
+{
+    border: 2px solid transparent;
+    background: silver;
+    color: maroon;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

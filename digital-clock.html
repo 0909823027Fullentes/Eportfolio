@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="digital-clock.css" />
+  <title>Digital Clock with Timer</title>
+</head>
+<body>
+  <div class="clock">
+    <div class="time" id="time">00:00:00<span class="ampm">PM</span></div>
+    <div class="date" id="date"></div>
+
+    <hr style="margin: 20px 0; border: 1px solid rgba(0,255,255,0.3);" />
+
+    <!-- TIMER -->
+    <div class="timer">
+      <h2>⏱ Timer</h2>
+      <div id="timer-display">00:00:00</div>
+      <div class="timer-controls">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+      <div id="plotTwistMsg" class="plot-twist-message" style="display:none;">
+         Plot Twist! You unlocked secret mode! 
+      </div>
+    </div>
+  </div>
+
+  <audio id="twistSound" preload="auto">
+    <source src="audio/AAAAUUUGHHHH%20Meme%20Sound%20Effect.mp3" type="audio/mpeg">
+    <source src="audio/AAAAUUUGHHHH.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p><a href="website.html">Back to profile</a></p>
+
+  <script>
+    /* ================= DIGITAL CLOCK ================= */
+    function updateClock() 
+    {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+      let ampm = "AM";
+
+      if (hours >= 12) ampm = "PM";
+      if (hours > 12) hours -= 12;
+      if (hours === 0) hours = 12;
+
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      const timeString = `${hours}:${minutes}:${seconds} <span class="ampm">${ampm}</span>`;
+      document.getElementById("time").innerHTML = timeString;
+
+      const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("date").textContent = now.toLocaleDateString(undefined, options);
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    /* ================= TIMER ================= */
+    let timerInterval;
+    let timerSeconds = 0;
+    let timerRunning = false;
+    let plotTwistTriggered = false;
+
+    function startTimer() 
+    {
+      if (timerRunning) return;
+      timerRunning = true;
+      timerInterval = setInterval(() => {
+        timerSeconds++;
+        displayTimer();
+        checkPlotTwist();
+      }, 1000);
+    }
+
+    function pauseTimer() 
+    {
+      clearInterval(timerInterval);
+      timerRunning = false;
+    }
+
+    function resetTimer() 
+    {
+      clearInterval(timerInterval);
+      timerSeconds = 0;
+      timerRunning = false;
+      plotTwistTriggered = false;
+      displayTimer();
+      document.body.classList.remove("twist");
+      document.getElementById("plotTwistMsg").style.display = "none";
+    }
+
+    function displayTimer()
+    {
+      let hrs = Math.floor(timerSeconds / 3600);
+      let mins = Math.floor((timerSeconds % 3600) / 60);
+      let secs = timerSeconds % 60;
+
+      hrs = hrs < 10 ? "0" + hrs : hrs;
+      mins = mins < 10 ? "0" + mins : mins;
+      secs = secs < 10 ? "0" + secs : secs;
+
+      document.getElementById("timer-display").textContent = `${hrs}:${mins}:${secs}`;
+    }
+
+    /* ================= PLOT TWIST ================= */
+    function checkPlotTwist() {
+      if (!plotTwistTriggered && timerSeconds === 10) 
+      {
+        plotTwistTriggered = true;
+        document.body.classList.add("twist");
+        document.getElementById("plotTwistMsg").style.display = "block";
+
+        const sound = document.getElementById("twistSound");
+
+        // ✅ Try to play sound safely
+        sound.play().then(() => {
+          console.log("Twist sound played successfully!");
+        }).catch((error) => {
+          console.warn("Audio playback failed:", error);
+          alert("Plot twist activated, but the sound could not play automatically.");
+        });
+
+        alert("Plot twist! You’ve triggered secret mode!");
+      }
+    }
+  </script>
+</body>
+</html>

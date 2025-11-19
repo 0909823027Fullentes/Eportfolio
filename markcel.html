@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markcel Resume</title>
+</head>
+    
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa; 
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .socials
+        {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* ===== Header ===== */
+        header {
+            background: linear-gradient(90deg, #006d77, #83c5be);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        header p a
+        {
+            color: #edf6f9;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        header .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .avatar {
+            margin-bottom: 10px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .title-wrap 
+        {
+            text-align: center;
+        }
+        .title-wrap h1 
+        {
+            margin: 5px 0;
+            font-size: 2rem;
+            color: white;
+            font-style: italic;
+        }
+        .title-wrap p 
+        {
+            margin: 0;
+            color: white;
+            font-style: italic;
+        }
+
+        /* ===== Navigation ===== */
+        nav ul 
+        {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li 
+        {
+            margin: 0 15px;
+        }
+
+        nav ul li a 
+        {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-style: italic;
+        }
+
+        nav ul li a:hover 
+        {
+            background: #edf6f9;
+            color: #006d77;
+        }
+
+        /* ===== Main Content ===== */
+        #main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section 
+        {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+
+        section:hover 
+        {
+            transform: translateY(-5px);
+        }
+
+        section h2 
+        {
+            color: #006d77;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #83c5be;
+            padding-bottom: 5px;
+        }
+
+        section p
+        {
+            margin-bottom: 10px;
+            color: black;
+        }
+
+    </style>
+
+
+<body>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <p><a href="junji.html">View Junji's Resume</a></p>
+        <div class="brand">
+            <img class="avatar" src="pic/markcell.jfif" alt="Portrait of Markcel Evalarosa" width="100" height="100">
+            <div class="title-wrap">
+                <h1>Markcel John Evalarosa</h1>
+                <p>Aspiring Web Developer</p>
+                <p>Aspiring Cyber Security Specialist</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul aria-label="Navigation Menu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+        <!-- Home -->
+        <section id="Home">
+            <h2>Home</h2>
+            <h1>Welcome to my online resume website!</h1>
+        </section>
+
+        <!-- About -->
+        <section id="About">
+            <h2>About Me</h2>
+            <p>A dedicated and hardworking BSIT student with experience of bieng a reliable and tustworthy trainer and an active server for almost a year. I am capable of handling any task and responsiblies well with the corresponding wisdom and finish them within the given limits.</p>
+        </section>
+
+        <!-- Education -->
+        <section id="Education">
+            <h2>Education</h2>
+            <h5>PRIMARY EDUCATION</h5>
+            <p>Biabas,Ubay,Bohol elementary School</p>
+            <h5>SECONDARY EDUCATION </h5>
+            <p>Southvile 8C National High School</p>
+            <h5>TERTIARY EDUCATION</h5>
+            <p>Kasiglahan Village Senior High School (ICT)</p>
+            <h5>2024 - Present</h5>
+            <p>Colegio De montalban (BSIT)</p>
+
+        </section>
+
+        <!-- Skills -->
+        <section id="Skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><p>Communication skills</p></li>
+                <li><p>Problem-solving skills</p></li>
+                <li><p>Customer Service</p></li>
+                <li><p>Teamwork</p></li>
+                <li><p>Adaptability</p></li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="Contact">
+            <h2>Contact Information</h2>
+            <p>Email: emarkceljohn@gmail.com</p>
+            <p>Phone: 09068091093</p>
+        </section>
+    </main>    
+
+    <footer>
+        <p>© 2025 markcel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
