@@ -81,12 +81,14 @@ nav ul li {
 }
 
 nav ul li a {
+    
     text-decoration: none;
     color: #74C0FC;
     transition: 0.3s ease;
 }
 
 nav ul li a:hover {
+    font-weight: bold;
     text-decoration: underline;
     color: white;
 }
@@ -494,4 +496,5 @@ footer
     color: #74C0FC;
     border-top: 1px solid #74C0FC;
     margin-top: 40px;
+
 }
