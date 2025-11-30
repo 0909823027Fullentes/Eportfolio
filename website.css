@@ -338,8 +338,10 @@ nav ul li a.active {
 /* Work Section */
 .works 
 {
-    padding: 80px 10%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center each item horizontally */
+    gap: 40px; /* space between items */
 }
 
 .works .work-text 
@@ -500,5 +502,6 @@ footer
     margin-top: 40px;
 
 }
+
 
 
