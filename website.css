@@ -54,6 +54,7 @@ nav {
 }
 
 nav .logo {
+    font-weight: bold;
     font-size: 22px;
     color: #74C0FC;
     cursor: pointer;
@@ -499,4 +500,5 @@ footer
     margin-top: 40px;
 
 }
+
 
