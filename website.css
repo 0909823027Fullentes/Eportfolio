@@ -340,8 +340,9 @@ nav ul li a.active {
 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* center each item horizontally */
-    gap: 40px; /* space between items */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .works .work-text 
@@ -502,6 +503,7 @@ footer
     margin-top: 40px;
 
 }
+
 
 
 
