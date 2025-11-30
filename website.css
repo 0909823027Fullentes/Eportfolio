@@ -81,7 +81,7 @@ nav ul li {
 }
 
 nav ul li a {
-    
+    font-weight: bold;
     text-decoration: none;
     color: #74C0FC;
     transition: 0.3s ease;
@@ -94,6 +94,7 @@ nav ul li a:hover {
 }
 
 nav ul li a.active {
+    font-weight: bold;
     color: white;
     text-decoration: underline;
 }
@@ -498,3 +499,4 @@ footer
     margin-top: 40px;
 
 }
+
