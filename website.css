@@ -504,11 +504,40 @@ footer
 
 }
 
-.recommendation
-{
-     margin-bottom: 40px;
-    background-color: white;
+.recommend-section {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;       /* space between boxes */
+    max-width: 800px;
+    margin: auto;
 }
 
+.recommend-box {
+    background: #ffffff;
+    border-left: 6px solid #4e73df;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.recommend-box h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #4e73df;
+}
+
+.recommend-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.recommend-author {
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+}
 
 
