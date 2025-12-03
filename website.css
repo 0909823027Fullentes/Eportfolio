@@ -504,14 +504,18 @@ footer
 
 }
 
-.socials 
+.socials a 
 {
-    animation: fa-spin 2s infinite linear;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 25px;
+    transition: 0.3s;
 }
 
-@keyframes socials
+.socials a:hover 
 {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    color: #00aaff;
+    transform: scale(1.2);
 }
+
 
