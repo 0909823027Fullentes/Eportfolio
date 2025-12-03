@@ -504,18 +504,16 @@ footer
 
 }
 
-.socials a 
+.socials i 
 {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 25px;
-    transition: 0.3s;
+    animation-duration: 2s !important; /* slower spin */
 }
 
-.socials a:hover 
+.socials i 
 {
-    color: #00aaff;
-    transform: scale(1.2);
+    animation-duration: 0.5s !important; /* faster spin */
 }
+
+
 
 
