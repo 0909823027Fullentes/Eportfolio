@@ -504,13 +504,14 @@ footer
 
 }
 
-.fa-spin 
+.socials 
 {
     animation: fa-spin 2s infinite linear;
 }
 
-@keyframes fa-spin 
+@keyframes socials
 {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
